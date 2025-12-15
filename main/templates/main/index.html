@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+            <style>
+/* Меняет цвет и размер заголовка */
+                header h1 {
+    color: #9d2a34ff; /* поменяйте на любой цвет: имя, HEX, rgb(...) или hsl(...) */
+    font-size: 23px; /* или 32px, 2rem и т.д. */
+    line-height: 1.1;
+    margin: 0.5rem 0;
+}
+</style>
+
+    <main>
+        <p>Содержимое страницы</p>
+    </main>
+<body>
+    <p>{{ content }}</p>
+    {% if is_authenticated %}
+        <p>{{ list.0 }}</p>
+        <p>{{ dict.first }}</p>
+    {% endif %}
+
+</p>
+
+</body>
+    <footer>
+        <small>© 2025</small>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+<figure class="cat-photo" style="text-align:center;margin:1rem 0;">
+    <img src="{% static 'images/cat.jpg' %}" alt="Фото кота" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+    <figcaption style="font-size:0.9rem;color:#555;margin-top:0.5rem;">Милый кот</figcaption>
+</figure>
+
+</body>
+</html> 
+
+
